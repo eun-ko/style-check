@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
 
-import {Intro,Questions,Result} from "./routes/index.js";
+import {Intro,Questions,Result,NotFound} from "./routes/index.js";
 
 export default function App() {
   return (
@@ -12,6 +12,7 @@ export default function App() {
        <Route exact path="/" component={Intro}/>
        <Route path="/question" component={Questions}/>
        <Route path="/result" component={Result}/>
+       <Route path="*" component={NotFound}/>
      </Switch>
     </Router>
     </Wrapper>
