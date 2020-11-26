@@ -1,9 +1,32 @@
+import React from 'react';
+import styled from "styled-components";
+import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
 
-function App() {
+import {Intro,Questions,Result} from "./routes/index.js";
+
+export default function App() {
   return (
-    <div>
-    </div>
+    <Wrapper>
+    <Router>
+     <Switch>
+       <Route exact path="/" component={Intro}/>
+       <Route path="/question" component={Questions}/>
+       <Route path="/result" component={Result}/>
+     </Switch>
+    </Router>
+    </Wrapper>
   );
 }
 
-export default App;
+const Wrapper=styled.div`
+
+height:100%;
+max-width: 37.5rem;
+display:flex;
+flex-direction:column;
+font-family: 'Black Han Sans', sans-serif;
+
+@media screen and (min-width: 769px) {
+  margin-left:25rem;
+  
+`;
