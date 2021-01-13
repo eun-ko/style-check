@@ -20,14 +20,13 @@ export default function App() {
 }
 
 const Wrapper=styled.div`
-
-height:100%;
-max-width: 37.5rem;
-display:flex;
-flex-direction:column;
-font-family: 'Black Han Sans', sans-serif;
-
-@media screen and (min-width: 769px) {
-  margin-left:25rem;
-  
+  height:100%;
+  max-width: 37.5rem;
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+  font-family: 'Black Han Sans', sans-serif;
+  width: 100%;
+  max-width: 26rem;
+  min-height: 100vh;
 `;

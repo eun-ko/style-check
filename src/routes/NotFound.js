@@ -12,18 +12,17 @@ export default function NotFound() {
 }
 
 const Wrapper=styled.div`
-
-margin-top:10rem;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-font-family: 'Black Han Sans', sans-serif;
-
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Black Han Sans', sans-serif;
 `;
 
 const WarningIcon=styled.div`
-display:flex;
-justify-content:center;
-margin-bottom:2rem;
-font-size:2.5rem;`;
+  display:flex;
+  justify-content:center;
+  margin-bottom:2rem;
+  font-size:2.5rem;
+`;

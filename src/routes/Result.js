@@ -17,78 +17,77 @@ export default function Result(props) {
   
   const maxSum=Math.max(...arr);
   
-  const Content=()=>{
-    if(maxSum===dSum) return getTypeInformation(dArr)
-    else if(maxSum===iSum) return getTypeInformation(iArr)
-    else if(maxSum===sSum) return getTypeInformation(sArr)
-    else return getTypeInformation(cArr)
+  const TypeResult=()=>{
+    if(maxSum===dSum) return typeInformation(dArr)
+    else if(maxSum===iSum) return typeInformation(iArr)
+    else if(maxSum===sSum) return typeInformation(sArr)
+    else return typeInformation(cArr)
   }
 
-  const getTypeInformation=(arr)=>{
+  const typeInformation=(arr)=>{
     return(
     <>
-    <TypeInfo>
-      <Label>유형 설명</Label>
-      {arr[0]}
-    </TypeInfo>
-    <TypeInfo>
-      <Label>싫어하는 것</Label>
-      {arr[1]}
-    </TypeInfo>
-    <TypeInfo>
-      <Label>발전시켜야하는 것</Label>
-      {arr[2]}
-    </TypeInfo>
+      <TypeInfo>
+        <Label>유형 설명</Label>
+        {arr[0]}
+      </TypeInfo>
+      <TypeInfo>
+        <Label>싫어하는 것</Label>
+        {arr[1]}
+      </TypeInfo>
+      <TypeInfo>
+        <Label>발전시켜야하는 것</Label>
+        {arr[2]}
+      </TypeInfo>
     </>
     )
   }
 
-return (
-<Wrapper>
-<Content/>
-<SLink to="/">
-<RestartButton>다시 하기</RestartButton>
-</SLink>
-</Wrapper>)
-}
+  return (
+    <Wrapper>
+      <TypeResult/>
+      <SLink to="/">
+      <RestartButton>다시 하기</RestartButton>
+      </SLink>
+    </Wrapper>
+    )
+  }
 
 const Wrapper=styled.div`
-margin-top:10rem;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
 `;
 
 const SLink=styled(Link)`
-text-decoration:none;
+  text-decoration:none;
 `
 const TypeInfo=styled.div`
-width:90%;
-display:flex;
-flex-direction:column;
-font-family: 'Do Hyeon', sans-serif;
-margin:0 3rem;
-margin-bottom:2rem;
-
+  width:90%;
+  display:flex;
+  flex-direction:column;
+  font-family: 'Do Hyeon', sans-serif;
+  margin:0 3rem 2rem 3rem;
 `;
 const Label=styled.div`
-margin:0;
-margin-bottom:0.6rem;
-font-family: 'Black Han Sans', sans-serif;
+  margin:0 0 0.6rem 0;
+  font-size:1.1rem;
+  font-family: 'Black Han Sans', sans-serif;
 `;
 
 const RestartButton = styled.div`
   width: 6rem;
   height: 2rem;
-  color: #00462A;
+  color: #0B3F78;
   font-size: 1.3rem;
-  border: 5px solid #00462A;
+  border: 5px solid #0B3F78;
   border-radius:1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 4rem;
   cursor: pointer;
   animation: bounceIn 3s ease-in-out infinite ;
   @keyframes bounceIn {

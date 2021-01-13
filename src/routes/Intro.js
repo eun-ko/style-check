@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Typing from 'react-typing-animation';
 
 export default function Intro({history}) {
+  
   const handleStartButton=()=>{
     history.push('/question');
   }
@@ -10,66 +11,67 @@ export default function Intro({history}) {
   return (
     <Wrapper>
       <TypingArea>
-      <Typing speed={30}>
-      <Title>2020 인간과 종교 
-      <br/> 나의 스타일 조사
-      </Title>
-      <Typing.Delay ms={800} />
-      <WarningIcon>⚠️</WarningIcon>
-      <WarningText>
-        다시 선택할 수 없으니 <br/>신중히 골라주세요!
-      </WarningText>
-      </Typing>
+        <Typing speed={30}>
+          <Title>2020 인간과 종교 
+          <br/> 나의 스타일 조사
+          </Title>
+          <Typing.Delay ms={800} />
+          <WarningIcon>⚠️</WarningIcon>
+          <WarningText>
+            다시 선택할 수 없으니 <br/>신중히 골라주세요!
+          </WarningText>
+        </Typing>
       </TypingArea>
-    <StartButton onClick={handleStartButton} >시작</StartButton>
-    
+      <StartButton onClick={handleStartButton} >시작</StartButton>
     </Wrapper>
   );
 }
 const TypingArea=styled.div`
-height:20rem;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-`
+  height:20rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+`;
+
 const WarningIcon=styled.div`
-display:flex;
-justify-content:center;
-margin-bottom:2rem;
-font-size:2.5rem;`;
+  display:flex;
+  justify-content:center;
+  margin-bottom:2rem;
+  font-size:2.5rem;
+`;
 
 const WarningText=styled.p`
-text-align:center;
-font-size:1.5rem;
+  text-align:center;
+  font-size:1.5rem;
 `;
+
 const Title=styled.p`
-text-align:center;
-font-size:2rem;
-margin-bottom:3rem;
-
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:3rem;
 `;
+
 const Wrapper=styled.div`
-
-margin-top:10rem;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-font-family: 'Black Han Sans', sans-serif;
-
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Black Han Sans', sans-serif;
 `;
+
 const StartButton = styled.div`
   width: 9rem;
   height: 2.5rem;
-  color: #00462A;
+  color: #0B3F78;
   font-size: 2rem;
-  border: 5px solid #00462A;
+  border: 5px solid #0B3F78;
   border-radius:1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 4rem;
   cursor: pointer;
   animation: fadeInUp 1s ;
   @keyframes fadeInUp {
