@@ -78,7 +78,7 @@ export default function Questions() {
             dSum:dSum,
             iSum:iSum,
             sSum:sSum,
-            cSum,cSum
+            cSum:cSum
             }
           }}>
             <ResultButton>결과 확인</ResultButton>
