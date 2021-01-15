@@ -29,4 +29,5 @@ const Wrapper=styled.div`
   width: 100%;
   max-width: 26rem;
   min-height: 100vh;
+  box-shadow : 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 `;
